@@ -707,7 +707,7 @@ void *platform_init(struct audio_device *adev)
      * or headphones through non-slimbus backend such as MI2S or AUXPCM etc.,
      * the ext_xxxx flags must be set accordingly.
      */
-    if (strstr(snd_card_name, "tfa9890_stereo")) {
+    if (strstr(snd_card_name, "tfa9890_stereo") || strstr(snd_card_name, "msm8974-taiko-mtp-snd-card")) {
         my_data->ext_speaker = true;
         my_data->ext_earpiece = true;
     } else if (strstr(snd_card_name, "tfa9890")) {
